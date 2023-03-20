@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
             body: Builder(
               builder: (context) {
                 if (state is HomeLoadingState) {
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 } else if (state is HomeErrorState) {
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                     itemCount: state.users.length,
                   );
                 } else {
-                  return SizedBox();
+                  return const SizedBox();
                 }
               },
             ),
